@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currency Converter — UTS DTP</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+  <img src="assets/LOGO VINZ-EFFECT.png" alt="Logo VINZ EFFECT" class="brand-logo">
+  <div class="brand-text">
+    <h1>VINZ</h1>
+    <p>CURRENCY CONVERTER</p>
+  </div>
+</header>
+
+    <section class="card">
+      <form id="converterForm" autocomplete="off" novalidate>
+        <div class="row">
+          <label for="amount">Jumlah</label>
+          <input id="amount" name="amount" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*" placeholder="Masukkan angka" />
+        </div>
+
+        <div class="row two-cols">
+          <div>
+            <label for="from">Dari</label>
+            <select id="from" name="from">
+              <option value="IDR">🇮🇩 IDR</option>
+              <option value="USD">🇺🇸 USD</option>
+              <option value="EUR">🇪🇺 EUR</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="to">Ke</label>
+            <select id="to" name="to">
+              <option value="USD">🇺🇸 USD</option>
+              <option value="EUR">🇪🇺 EUR</option>
+              <option value="IDR">🇮🇩 IDR</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="convertBtn" class="btn primary">Konversi</button>
+          <button type="button" id="swapBtn" class="btn outline">Tukar</button>
+          <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+        </div>
+
+        <div class="result" id="result" aria-live="polite">
+          <p class="muted">Hasil akan muncul di sini setelah kamu tekan <strong>Konversi</strong>.</p>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
